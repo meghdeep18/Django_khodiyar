@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+{% block css %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khodiyar-travels</title>
+    <!-- <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" /> -->
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="{% static  'style.css' %}">
+    <link rel="icon" type="image/png" href="{% static  'Screenshot_2024-08-11_113731-removebg-preview.png'  %}">
+
+    {% endblock %}
+</head>
+
+<body>
+    <div class="cursor">
+    </div>
+    {% block main_content %}
+    {% endblock %}
+
+
+    {% block scripts %}
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static  'script.js'%}"></script>
+    <!-- <script src="translation.js"></script> -->
+     
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/DEFAULT';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    
+    
+    
+    
+    {% endblock %}
+
+</body>
+
+</html>
