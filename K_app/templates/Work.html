@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work With Us - Khodiyar Travels</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link rel="stylesheet" href="work.css">
-    <link rel="icon" type="image/png" href="Screenshot_2024-08-11_113731-removebg-preview.png">
+    <link rel="stylesheet" href="{% static  'work.css'%}">
+    <link rel="icon" type="image/png" href="{% static  'Screenshot_2024-08-11_113731-removebg-preview.png'%}">
 </head>
 <body>
 
@@ -14,11 +15,11 @@
    
     <!-- Navigation (Optional if included in main template) -->
     <nav id="nav">
-        <img src="Screenshot_2024-08-11_113731-removebg-preview.png" alt="Logo">
+        <img src="{% static  'Screenshot_2024-08-11_113731-removebg-preview.png'%}" alt="Logo">
         <div id="nav-part2">
-            <a href="index.html"><h4 id="home">Home</h4></a>
+            <a href="/"><h4 id="home">Home</h4></a>
             <h4>Work</h4>
-            <a href="contact.html"> <h4 id="home">Contact</h4></a>
+            <a href="/contact"> <h4 id="home">Contact</h4></a>
             <div id="circle"></div>
         </div>
     </nav>
@@ -120,7 +121,7 @@
     <script  src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="work.js"></script>
+    <script src="{% static  'work.js'%}"></script>
     
 </body>
 </html>

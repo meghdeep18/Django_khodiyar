@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Khodiyar Travels</title>
-    <link rel="stylesheet" href="{% static  'contact.css'%}">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header>
         <nav id="nav">
-            <img src="{% static  'Screenshot_2024-08-11_113731-removebg-preview.png'        %}" alt="Khodiyar Travels Logo">
+            <img src="{% static 'Screenshot_2024-08-11_113731-removebg-preview.png' %}" alt="Khodiyar Travels Logo">
             <div id="nav-part2">
-                <a href="/"><h4>Home</h4></a>
-                <a href="/work"><h4>Work</h4></a>
+                <a href="/index"><h4>Home</h4></a>
+                <a href="/work.html"><h4>Work</h4></a>
                 <a href="#"><h4>Office</h4></a>
-                <a href="/contact"><h4>Contact</h4></a>
+                <a href="/contact.html"><h4>Contact</h4></a>
             </div>
             <div id="nav-part3">
                 <div id="circle"></div>
@@ -46,10 +46,10 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" title="link" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="link"class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                         <!-- <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a> -->
-                        <a href="#" title="link" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="right-section">
@@ -116,7 +116,20 @@
         <p>Message sent successfully!</p>
     </div>
 
+    <!-- Tawk.to Live Chat Widget -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/DEFAULT';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="{% static  'contact.js'%}"></script>
+    <script src="{% static 'contact.js' %}"></script>
 </body>
 </html>

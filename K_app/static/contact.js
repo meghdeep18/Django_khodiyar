@@ -34,26 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power3.out',
         delay: 1.3
     });
-})
-    // // Floating label effect
-    // const inputs = document.querySelectorAll('input, textarea');
-    // inputs.forEach(input => {
-    //     input.addEventListener('focus', () => {
-    //         input.parentNode.classList.add('focused');
-    //     });
-    //     input.addEventListener('blur', () => {
-    //         if (input
 
+    // Optional: Floating label effect for form inputs
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentNode.classList.add('focused');
+        });
+        input.addEventListener('blur', () => {
+            if (input.value === '') {
+                input.parentNode.classList.remove('focused');
+            }
+        });
+    });
+
+    // Scroll to Top Button functionality
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            scrollToTopBtn.style.display = 'flex';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
 
-window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollToTopBtn.style.display = "flex";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-};
-
-scrollToTopBtn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToTopBtn.addEventListener('click', () => {
+        gsap.to(window, { scrollTo: { y: 0 }, duration: 1, ease: 'power2.inOut' });
+    });
 });
