@@ -4,6 +4,11 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .models import Contact
 
+# 
+
+
+
+
 
 def index(request):
     return render(request,"index.html")
@@ -14,19 +19,33 @@ def Work(request):
 def contact(request):
     return render(request,"contact.html")
     
+
+
+
+
 def contact_submit(request):
-    if request.method == 'POST':
-        # Get the form data from the POST request
+    if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
+        subject = request.POST.get('subject')
         message = request.POST.get('message')
 
-        # Create and save the contact instance
-        contact = Contact(name=name, email=email, message=message)
+        # Save the data to the Contact model
+        contact = Contact(name=name, email=email, subject=subject, message=message)
         contact.save()
 
-        return redirect("/")
-    
-    # If the request method is not POST, return an invalid request message
-    return HttpResponse("Invalid request method.")
+        # Send the email
+        send_mail(
+            subject=f"Contact Form Submission from {name}",
+            message=f"Subject: {subject}\n\nMessage:\n{message}",
+            from_email=email,
+            recipient_list=['khodiyartravels2003@gmail.com'],  # Your email where you want to receive messages
+        )
+
+        return HttpResponse("Message sent and saved successfully!")
+    else:
+        return HttpResponse("Invalid request method.")
+
+
+
 

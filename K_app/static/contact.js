@@ -34,31 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: 'power3.out',
         delay: 1.3
     });
-
-    // Optional: Floating label effect for form inputs
-    const inputs = document.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentNode.classList.add('focused');
-        });
-        input.addEventListener('blur', () => {
-            if (input.value === '') {
-                input.parentNode.classList.remove('focused');
-            }
-        });
-    });
-
-    // Scroll to Top Button functionality
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            scrollToTopBtn.style.display = 'flex';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
-
-    scrollToTopBtn.addEventListener('click', () => {
-        gsap.to(window, { scrollTo: { y: 0 }, duration: 1, ease: 'power2.inOut' });
-    });
-});
+})
+    gsap.from(".container", { duration: 1, y: 50, opacity: 0, ease: "power2.out", delay: 0.2 });
+gsap.from(".footer", { duration: 1.2, y: 100, opacity: 0, ease: "power2.out", delay: 0.5 });
