@@ -14,5 +14,9 @@ This project is a web application developed using the Django framework, designed
     --HTML5, CSS3, JavaScript, Bootstrap</br>
     --jQuery for dynamic DOM manipulation</br>
     --GSAP for animations </br>
+<h3>* Backend </h3>
+   --Python </br>
+   --Django</br>
+   --MYSQL</br>
 
 
