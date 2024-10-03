@@ -2,12 +2,7 @@ from django.shortcuts import redirect,render,HttpResponse
 from .models import *
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Contact
-
 # 
-
-
-
 
 
 def index(request):
@@ -19,8 +14,37 @@ def Work(request):
 def contact(request):
     return render(request,"contact.html")
     
+def login(request):
+    return render(request,"login.html")
+
+def signup(request):
+    return render(request,"signup.html")
 
 
+
+# def signup_func(request):
+#     if request.method == 'POST':
+#         name = request.POST['username']
+#         email = request.POST['email']
+#         password = request.POST['password']
+        
+#         # Create new user
+#         master = Master(username=username, email=email, password=password)
+#         master.save()
+
+#         return redirect('/')
+    
+#     return render(request, 'signup.html')
+
+
+# def login_func(request):
+#     if request.method == "POST":
+
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         master = Master.authenticate(username=username, password=password)
+#     if user is not None:
+#         login(request, user)
 
 
 def contact_submit(request):
@@ -45,7 +69,3 @@ def contact_submit(request):
         return HttpResponse("Message sent and saved successfully!")
     else:
         return HttpResponse("Invalid request method.")
-
-
-
-
