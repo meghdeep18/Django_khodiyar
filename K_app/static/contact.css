@@ -83,7 +83,7 @@ body {
     font-size: 3rem;
     text-align: center;
     padding: 30px 0;
-    color: #EDBFFF;
+    color: #fff;
 }
 
 .contact-wrapper {
@@ -99,7 +99,7 @@ body {
 .subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #EDBFFF;
+    color: #fff;
 }
 
 .contact-info {
@@ -115,7 +115,7 @@ body {
 .info-item i {
     margin-right: 1rem;
     font-size: 1.2rem;
-    color: #EDBFFF;
+    color: #fff;
 }
 
 .social-links {
@@ -124,7 +124,7 @@ body {
 }
 
 .social-icon {
-    color: #EDBFFF;
+    color: #fff;
     font-size: 1.5rem;
     transition: transform 0.3s ease;
 }
@@ -142,7 +142,7 @@ label {
     display: block;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
-    color: #EDBFFF;
+    color: #fff;
 }
 
 input, textarea {
@@ -150,7 +150,7 @@ input, textarea {
     padding: 0.75rem;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid #EDBFFF;
+    border-bottom: 2px solid #fff;
     background-color: transparent;
     color: white;
     transition: border-color 0.3s ease;
@@ -182,7 +182,7 @@ textarea {
 }
 
 .submit-btn {
-    background: #EDBFFF;
+    background: #fff;
     color: #111;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -204,7 +204,7 @@ textarea {
 
 /* Footer Styles */
 .footer {
-    background-color: #222;
+    background-color: maroon;
     color: #fff;
     padding: 50px 5vw;
     text-align: center;
@@ -225,7 +225,7 @@ textarea {
 }
 
 .footer .upper .circle {
-    background-color: #EDBFFF;
+    background-color: #fff;
     color: #111;
     border-radius: 50%;
     width: 120px;
@@ -271,7 +271,7 @@ textarea {
 
 .footer .lower .left button {
     padding: 10px 20px;
-    background-color: #EDBFFF;
+    background-color: #fff;
     color: #111;
     border: none;
     border-radius: 20px;
@@ -280,7 +280,7 @@ textarea {
 }
 
 .footer .lower .left button:hover {
-    background-color: #d58fdc;
+    background-color: #fff;
 }
 
 .footer .lower .right h1 {
