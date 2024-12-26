@@ -1,11 +1,14 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form submission
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
+    // Simulated login validation
+    if (username === "admin" && password === "password") {
+        alert("Login successful!");
+        // Redirect or perform desired actions
+    } else {
+        alert("Invalid username or password. Please try again.");
+    }
 });

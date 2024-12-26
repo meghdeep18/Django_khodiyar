@@ -21,29 +21,29 @@ def signup(request):
 
 
 
-# def signup_func(request):
-#     if request.method == 'POST':
-#         name = request.POST['username']
-#         email = request.POST['email']
-#         password = request.POST['password']
+def signup_func(request):
+    if request.method == 'POST':
+        name = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
         
-#         # Create new user
-#         master = Master(username=username, email=email, password=password)
-#         master.save()
+        # Create new user
+        master = Master(username=username, email=email, password=password)
+        master.save()
 
-#         return redirect('/')
+        return redirect('/')
     
-#     return render(request, 'login.html')
+    return render(request, 'login.html')
 
 
-# def login_func(request):
-#     if request.method == "POST":
+def login_func(request):
+    if request.method == "POST":
 
-#         username = request.POST['username']
-#         password = request.POST['password']
-#         master = Master.authenticate(username=username, password=password)
-#     if user is not None:
-#         login(request, user)
+        username = request.POST['username']
+        password = request.POST['password']
+        master = Master.authenticate(username=username, password=password)
+    if user is not None:
+        login(request, user)
 
 
 def contact_submit(request):

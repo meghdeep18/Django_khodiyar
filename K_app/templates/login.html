@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static  'login.css  '%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+ 
+        <nav id="nav">
+            
+            <div id="nav-part2">
+                <img src="{% static  'Screenshot_2024-08-11_113731-removebg-preview.png'%}" alt="Khodiyar Travels Logo">
+                <a href="/"><h4>Home</h4></a>
+                <a href="/work"><h4>Work</h4></a>
+                <a href="#"><h4>Office</h4></a>
+                <a href="/contact"><h4>Contact</h4></a>
+                <div id="circle"></div>
+            </div>
+        
+                
+           
+        </nav>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm" method="post" action="{%   url  'login_func'  %}">
+                {% csrf_token %}
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="{% static  'login.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup Page</title>
+    <link rel="stylesheet" href="{%     static  'signup.css  '%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2>signup</h2>
+            <form id="signupForm" method="post" action="{%   url  'signup_func'  %}">
+                    {% csrf_token %}
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="email" id="email" placeholder="email" required>
+                </div>
+                <div class="input-group">   
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="cnfpassword" placeholder="cnfPassword" required>
+                </div>
+                <button type="submit">signup</button>
+                <p>Don't have an account? <a href="#">login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="{% static  'signup.js  '%}"></script>
+</body>
+</html>
