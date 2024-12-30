@@ -23,12 +23,14 @@ def signup(request):
 
 def signup_func(request):
     if request.method == 'POST':
-        name = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        cnfpassword = request.POST.get('cnfpassword')
+
         
-        # Create new user
-        master = Master(username=username, email=email, password=password)
+        
+        master = Master(name=name, email=email, password=password, cnfpassword=cnfpassword)
         master.save()
 
         return redirect('/')
@@ -38,10 +40,11 @@ def signup_func(request):
 
 def login_func(request):
     if request.method == "POST":
+        
+        name = request.POST.get('name')
+        password = request.POST.get('password')
+        master = Master.authenticate(name=name, password=password)
 
-        username = request.POST['username']
-        password = request.POST['password']
-        master = Master.authenticate(username=username, password=password)
     if user is not None:
         login(request, user)
 

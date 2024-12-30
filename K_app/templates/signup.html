@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup Page</title>
-    <link rel="stylesheet" href="{%     static  'signup.css  '%}">
+    <link rel="stylesheet" href="{% static  'signup.css  '%}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -14,28 +14,28 @@
         <div class="signup-box">
             <h2>signup</h2>
             <form id="signupForm" method="post" action="{%   url  'signup_func'  %}">
-                    {% csrf_token %}
+                {% csrf_token %}
                 <div class="input-group">
                     <i class="fas fa-user"></i>
-                    <input type="email" id="email" placeholder="email" required>
+                    <input type="email" id="email" name="email" placeholder="email" required>
                 </div>
                 <div class="input-group">   
                     <i class="fas fa-user"></i>
-                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="text" id="username" name="name"  placeholder="Username" required>
                 </div>
                 <div class="input-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="input-group">
                     <i class="fas fa-lock"></i>
-                    <input type="password" id="cnfpassword" placeholder="cnfPassword" required>
+                    <input type="password" id="cnfpassword" name="cnfPassword" placeholder="cnfPassword" required>
                 </div>
                 <button type="submit">signup</button>
-                <p>Don't have an account? <a href="#">login</a></p>
+                <p>Don't have an account? <a href="/login">login</a></p>
             </form>
         </div>
     </div>
-    <script src="{% static  'signup.js  '%}"></script>
+    <script src="{% static  'signup.js'%}"></script>
 </body>
 </html>
